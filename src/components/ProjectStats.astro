@@ -1,0 +1,22 @@
+---
+import { languages, partners, projectFacts } from "../data/project";
+---
+
+<dl class="project-stats" aria-label="TaMTAS project facts">
+  <div>
+    <dt>Duration</dt>
+    <dd>{projectFacts.durationMonths}<span> months</span></dd>
+  </div>
+  <div>
+    <dt>Languages</dt>
+    <dd>{languages.length}<span> languages</span></dd>
+  </div>
+  <div>
+    <dt>Consortium</dt>
+    <dd>{partners.length}<span> partners</span></dd>
+  </div>
+  <div>
+    <dt>Domain</dt>
+    <dd class="stat-word">{projectFacts.domain}</dd>
+  </div>
+</dl>

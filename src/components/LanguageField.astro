@@ -1,0 +1,22 @@
+---
+import { languages } from "../data/project";
+---
+
+<div class="language-field">
+  <div class="language-core" aria-hidden="true">
+    <img src="/brand/tamtas-logo-mark.svg" alt="" width="640" height="640" />
+  </div>
+  <div class="language-list">
+    {
+      languages.map((language, index) => (
+        <article style={`--language-index: ${index}`} data-reveal>
+          <span>{language.code}</span>
+          <div>
+            <h3>{language.name}</h3>
+            <p>{language.description}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</div>

@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import ContentListing from "../../components/ContentListing.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const news = (await getCollection("news"))
+  .filter((entry) => entry.data.status === "published")
+  .sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+const items = news.map((entry) => ({
+  title: entry.data.title,
+  summary: entry.data.summary,
+  meta: `${entry.data.category} · ${entry.data.publishedAt.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  })}`,
+}));
+---
+
+<BaseLayout
+  title="News"
+  description="Project updates, events, explainers and progress from the TaMTAS research consortium."
+>
+  <header class="inner-hero page-shell">
+    <p class="eyebrow">Updates</p>
+    <h1>Project news and progress.</h1>
+    <p>
+      Research milestones, public events, tutorials and explanations from across the
+      TaMTAS consortium.
+    </p>
+  </header>
+  <section class="listing-section page-shell">
+    <ContentListing items={items} />
+  </section>
+</BaseLayout>

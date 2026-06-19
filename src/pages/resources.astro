@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import ContentListing from "../components/ContentListing.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const resources = (await getCollection("resources")).sort((a, b) =>
+  a.data.title.localeCompare(b.data.title),
+);
+const items = resources.map((entry) => ({
+  title: entry.data.title,
+  summary: entry.data.summary,
+  meta: entry.data.kind,
+  status: entry.data.status,
+  href: entry.data.externalUrl,
+}));
+---
+
+<BaseLayout
+  title="Resources"
+  description="Access open tools, repositories, documentation and future TaMTAS demonstrators."
+>
+  <header class="inner-hero page-shell">
+    <p class="eyebrow">Resources</p>
+    <h1>Open tools and project resources.</h1>
+    <p>
+      Existing foundations are listed separately from resources created by TaMTAS.
+      Repository and demonstrator links will be added as they are released.
+    </p>
+  </header>
+  <section class="listing-section page-shell">
+    <ContentListing items={items} />
+  </section>
+</BaseLayout>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430 360" role="img" aria-labelledby="title desc">
+  <title id="title">TAMTAS logo</title>
+  <desc id="desc">A prism turns complex science and data dots into three simple language lines beside the TAMTAS wordmark.</desc>
+  <defs>
+    <style>
+      .ink { fill: #073b4c; }
+      .line-blue { stroke: #0077c8; }
+      .line-green { stroke: #54b948; }
+      .line-yellow { stroke: #ffc20e; }
+      .light { fill: #e8f6fa; }
+      .prism-fill { fill: #eef8fb; }
+      .prism-stroke { stroke: #073b4c; }
+      .wordmark {
+        font-family: Inter, Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif;
+        font-size: 142px;
+        font-weight: 800;
+        letter-spacing: 8px;
+      }
+    </style>
+  </defs>
+
+  <g transform="translate(72 64)">
+    <circle class="light" cx="42" cy="116" r="15"/>
+    <circle cx="65" cy="72" r="30" fill="#0077c8"/>
+    <circle cx="81" cy="154" r="18" fill="#073b4c"/>
+    <circle class="light" cx="97" cy="30" r="12"/>
+    <circle cx="112" cy="92" r="18" fill="#54b948"/>
+    <circle cx="128" cy="138" r="26" fill="#073b4c"/>
+    <circle cx="145" cy="68" r="24" fill="#ffc20e"/>
+    <circle cx="166" cy="32" r="18" fill="#0077c8"/>
+    <circle cx="176" cy="116" r="24" fill="#16a085"/>
+    <circle cx="198" cy="74" r="12" fill="#073b4c"/>
+    <circle cx="215" cy="154" r="30" fill="#54b948"/>
+    <circle cx="233" cy="106" r="18" fill="#073b4c"/>
+    <circle class="light" cx="250" cy="146" r="10"/>
+    <circle class="light" cx="266" cy="62" r="26"/>
+    <circle cx="284" cy="128" r="12" fill="#16a085"/>
+    <circle cx="310" cy="116" r="24" fill="#073b4c"/>
+    <circle class="light" cx="306" cy="52" r="18"/>
+    <circle cx="34" cy="178" r="18" fill="#073b4c"/>
+    <circle cx="70" cy="206" r="18" fill="#16a085"/>
+    <circle class="light" cx="104" cy="232" r="10"/>
+    <circle cx="134" cy="200" r="24" fill="#ffc20e"/>
+    <circle class="light" cx="158" cy="232" r="18"/>
+    <circle class="light" cx="288" cy="196" r="12"/>
+  </g>
+
+  <g transform="translate(340 74)">
+    <path class="prism-fill prism-stroke" d="M0 0 L155 106 L0 212 Z" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M34 47 L104 106 L34 165 Z" fill="#ffffff"/>
+  </g>
+
+  <g fill="none" stroke-width="14" stroke-linecap="round">
+    <path class="line-blue" d="M515 132 H660"/>
+    <path class="line-green" d="M555 180 H660"/>
+    <path class="line-yellow" d="M515 228 H660"/>
+  </g>
+  <circle cx="672" cy="132" r="20" fill="#0077c8"/>
+  <circle cx="672" cy="180" r="20" fill="#54b948"/>
+  <circle cx="672" cy="228" r="20" fill="#ffc20e"/>
+
+  <text class="ink wordmark" x="735" y="231">TAMTAS</text>
+</svg>

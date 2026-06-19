@@ -1,0 +1,20 @@
+---
+import { researchStages } from "../data/project";
+---
+
+<ol class="research-pipeline">
+  {
+    researchStages.map((stage, index) => (
+      <li data-reveal>
+        <div class="pipeline-index">
+          <span>{stage.workPackage}</span>
+          <b>{String(index + 1).padStart(2, "0")}</b>
+        </div>
+        <div>
+          <h3>{stage.title}</h3>
+          <p>{stage.description}</p>
+        </div>
+      </li>
+    ))
+  }
+</ol>

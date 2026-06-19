@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="title desc">
+  <title id="title">TAMTAS prism mark</title>
+  <desc id="desc">A prism turns complex science and data dots into three simple language lines.</desc>
+  <g transform="translate(62 166)">
+    <circle cx="42" cy="116" r="15" fill="#e8f6fa"/>
+    <circle cx="65" cy="72" r="30" fill="#0077c8"/>
+    <circle cx="81" cy="154" r="18" fill="#073b4c"/>
+    <circle cx="97" cy="30" r="12" fill="#e8f6fa"/>
+    <circle cx="112" cy="92" r="18" fill="#54b948"/>
+    <circle cx="128" cy="138" r="26" fill="#073b4c"/>
+    <circle cx="145" cy="68" r="24" fill="#ffc20e"/>
+    <circle cx="166" cy="32" r="18" fill="#0077c8"/>
+    <circle cx="176" cy="116" r="24" fill="#16a085"/>
+    <circle cx="198" cy="74" r="12" fill="#073b4c"/>
+    <circle cx="215" cy="154" r="30" fill="#54b948"/>
+    <circle cx="233" cy="106" r="18" fill="#073b4c"/>
+    <circle cx="250" cy="146" r="10" fill="#e8f6fa"/>
+    <circle cx="266" cy="62" r="26" fill="#e8f6fa"/>
+    <circle cx="284" cy="128" r="12" fill="#16a085"/>
+    <circle cx="310" cy="116" r="24" fill="#073b4c"/>
+    <circle cx="306" cy="52" r="18" fill="#e8f6fa"/>
+    <circle cx="34" cy="178" r="18" fill="#073b4c"/>
+    <circle cx="70" cy="206" r="18" fill="#16a085"/>
+    <circle cx="104" cy="232" r="10" fill="#e8f6fa"/>
+    <circle cx="134" cy="200" r="24" fill="#ffc20e"/>
+    <circle cx="158" cy="232" r="18" fill="#e8f6fa"/>
+    <circle cx="288" cy="196" r="12" fill="#e8f6fa"/>
+  </g>
+
+  <g transform="translate(338 176)">
+    <path d="M0 0 L155 106 L0 212 Z" fill="#eef8fb" stroke="#073b4c" stroke-width="20" stroke-linejoin="round"/>
+    <path d="M34 47 L104 106 L34 165 Z" fill="#ffffff"/>
+  </g>
+
+  <g fill="none" stroke-width="14" stroke-linecap="round">
+    <path d="M510 234 H578" stroke="#0077c8"/>
+    <path d="M530 282 H578" stroke="#54b948"/>
+    <path d="M510 330 H578" stroke="#ffc20e"/>
+  </g>
+  <circle cx="590" cy="234" r="20" fill="#0077c8"/>
+  <circle cx="590" cy="282" r="20" fill="#54b948"/>
+  <circle cx="590" cy="330" r="20" fill="#ffc20e"/>
+</svg>

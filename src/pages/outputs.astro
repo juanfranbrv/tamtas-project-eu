@@ -1,0 +1,33 @@
+---
+import { getCollection } from "astro:content";
+import ContentListing from "../components/ContentListing.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const outputs = (await getCollection("outputs")).sort(
+  (a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf(),
+);
+const items = outputs.map((entry) => ({
+  title: entry.data.title,
+  summary: entry.data.summary,
+  meta: `${entry.data.kind} · ${entry.data.publishedAt.getFullYear()}`,
+  status: entry.data.status,
+  href: entry.data.externalUrl,
+}));
+---
+
+<BaseLayout
+  title="Outputs"
+  description="Open TaMTAS deliverables, publications, datasets, models, tools and demonstrators."
+>
+  <header class="inner-hero page-shell">
+    <p class="eyebrow">Open science</p>
+    <h1>Open outputs, published as the project advances.</h1>
+    <p>
+      This page distinguishes available material from planned work. Publications,
+      datasets, models and demonstrators will appear here with direct repository links.
+    </p>
+  </header>
+  <section class="listing-section page-shell">
+    <ContentListing items={items} emptyMessage="Project outputs have not been published yet." />
+  </section>
+</BaseLayout>

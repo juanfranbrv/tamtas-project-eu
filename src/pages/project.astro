@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectStats from "../components/ProjectStats.astro";
+---
+
+<BaseLayout
+  title="Project"
+  description="Understand the TaMTAS mission, scientific challenge, objectives and commitment to open multilingual science."
+>
+  <header class="inner-hero page-shell">
+    <p class="eyebrow">The project</p>
+    <h1>A multilingual future for scientific knowledge.</h1>
+    <p>
+      TaMTAS addresses two connected barriers to scientific access: language and
+      complexity. It will translate scientific documents accurately, preserve their
+      terminology and adapt the result for different readers.
+    </p>
+  </header>
+
+  <div class="page-shell" data-reveal><ProjectStats /></div>
+
+  <section class="section page-shell split-editorial">
+    <div>
+      <p class="eyebrow">Long-term vision</p>
+      <h2>Knowledge should not depend on publishing or reading in one dominant language.</h2>
+    </div>
+    <div class="prose">
+      <p>
+        Much of scientific communication takes place in English. This creates extra
+        work for researchers using other languages and limits public access to current
+        knowledge.
+      </p>
+      <p>
+        TaMTAS combines machine translation, terminology management, quality estimation,
+        automatic correction and text adaptation. The intended result is a reusable
+        framework for accurate and accessible scientific communication.
+      </p>
+    </div>
+  </section>
+
+  <section class="section objective-band">
+    <div class="page-shell">
+      <div class="section-heading section-heading-light">
+        <p class="eyebrow">Specific objectives</p>
+        <h2>Eight objectives connect research quality with public value.</h2>
+      </div>
+      <ol class="objective-grid">
+        <li><span>01</span><p>Compile and enrich multilingual scientific corpora.</p></li>
+        <li><span>02</span><p>Advance terminology extraction and integration tools.</p></li>
+        <li><span>03</span><p>Train multilingual document-level translation models.</p></li>
+        <li><span>04</span><p>Detect terminology errors through quality estimation.</p></li>
+        <li><span>05</span><p>Correct translations with automatic post-editing.</p></li>
+        <li><span>06</span><p>Adapt translated text to different audiences.</p></li>
+        <li><span>07</span><p>Validate the system with real users and documents.</p></li>
+        <li><span>08</span><p>Publish results through open repositories and platforms.</p></li>
+      </ol>
+    </div>
+  </section>
+</BaseLayout>

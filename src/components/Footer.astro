@@ -1,0 +1,31 @@
+---
+import { navigation } from "../data/navigation";
+import { partners } from "../data/project";
+---
+
+<footer class="site-footer">
+  <div class="footer-main">
+    <div class="footer-statement">
+      <img src="/brand/tamtas-logo-white.svg" alt="TaMTAS" width="1430" height="360" />
+      <p>Making scientific knowledge accurate, multilingual and accessible.</p>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <p class="footer-label">Explore</p>
+      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+    </nav>
+
+    <div class="footer-partners">
+      <p class="footer-label">Consortium</p>
+      {partners.map((partner) => <a href={partner.href}>{partner.short}</a>)}
+    </div>
+  </div>
+
+  <div class="footer-meta">
+    <p>TaMTAS is a 36-month European research project proposed under CHIST-ERA Call 2025.</p>
+    <div>
+      <p>Open science, multilingual research and human-centred evaluation.</p>
+      <p class="footer-signature">by Codex</p>
+    </div>
+  </div>
+</footer>

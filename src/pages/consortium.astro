@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PartnerGrid from "../components/PartnerGrid.astro";
+import { stakeholders } from "../data/project";
+---
+
+<BaseLayout
+  title="Consortium"
+  description="Meet the five TaMTAS research partners and the stakeholder organisations supporting real-world evaluation."
+>
+  <header class="inner-hero page-shell">
+    <p class="eyebrow">Consortium</p>
+    <h1>Five partners, one integrated research programme.</h1>
+    <p>
+      The consortium connects complementary expertise across Spain, the United Kingdom,
+      Ireland and Estonia.
+    </p>
+  </header>
+
+  <section class="listing-section page-shell"><PartnerGrid /></section>
+
+  <section class="section stakeholder-band">
+    <div class="page-shell">
+      <div class="section-heading section-heading-light">
+        <p class="eyebrow">Stakeholder collaboration</p>
+        <h2>Real documents, real communities, real evaluation.</h2>
+        <p>
+          Scientific institutions and language organisations will provide materials,
+          domain expertise and feedback for project pilots.
+        </p>
+      </div>
+      <div class="stakeholder-grid">
+        {
+          stakeholders.map((stakeholder) => (
+            <a href={stakeholder.href} data-reveal>
+              <span>{stakeholder.short}</span>
+              <h3>{stakeholder.name}</h3>
+              <p>{stakeholder.role}</p>
+              <b aria-hidden="true">↗</b>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,40 @@
+---
+interface Item {
+  title: string;
+  summary: string;
+  meta: string;
+  status?: string;
+  href?: string;
+}
+
+interface Props {
+  items: Item[];
+  emptyMessage?: string;
+}
+
+const { items, emptyMessage = "No public items are available yet." } = Astro.props;
+---
+
+<div class="content-listing">
+  {
+    items.length > 0 ? (
+      items.map((item) => (
+        <article data-reveal>
+          <div class="content-meta">
+            <span>{item.meta}</span>
+            {item.status && <small>{item.status}</small>}
+          </div>
+          <h2>{item.title}</h2>
+          <p>{item.summary}</p>
+          {item.href && (
+            <a href={item.href}>
+              Open resource <span aria-hidden="true">↗</span>
+            </a>
+          )}
+        </article>
+      ))
+    ) : (
+      <p class="empty-state">{emptyMessage}</p>
+    )
+  }
+</div>

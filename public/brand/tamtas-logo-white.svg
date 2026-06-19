@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1430 360" role="img" aria-labelledby="title desc">
+  <title id="title">TAMTAS white logo</title>
+  <desc id="desc">A white prism mark and TAMTAS wordmark for dark backgrounds.</desc>
+  <g fill="#ffffff">
+    <g transform="translate(72 64)">
+      <circle cx="42" cy="116" r="15"/>
+      <circle cx="65" cy="72" r="30"/>
+      <circle cx="81" cy="154" r="18"/>
+      <circle cx="97" cy="30" r="12"/>
+      <circle cx="112" cy="92" r="18"/>
+      <circle cx="128" cy="138" r="26"/>
+      <circle cx="145" cy="68" r="24"/>
+      <circle cx="166" cy="32" r="18"/>
+      <circle cx="176" cy="116" r="24"/>
+      <circle cx="198" cy="74" r="12"/>
+      <circle cx="215" cy="154" r="30"/>
+      <circle cx="233" cy="106" r="18"/>
+      <circle cx="250" cy="146" r="10"/>
+      <circle cx="266" cy="62" r="26"/>
+      <circle cx="284" cy="128" r="12"/>
+      <circle cx="310" cy="116" r="24"/>
+      <circle cx="306" cy="52" r="18"/>
+      <circle cx="34" cy="178" r="18"/>
+      <circle cx="70" cy="206" r="18"/>
+      <circle cx="104" cy="232" r="10"/>
+      <circle cx="134" cy="200" r="24"/>
+      <circle cx="158" cy="232" r="18"/>
+      <circle cx="288" cy="196" r="12"/>
+    </g>
+    <text x="735" y="231" font-family="Inter, Montserrat, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="142" font-weight="800" letter-spacing="8">TAMTAS</text>
+  </g>
+  <path d="M340 74 L495 180 L340 286 Z" fill="none" stroke="#ffffff" stroke-width="20" stroke-linejoin="round"/>
+  <g fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round">
+    <path d="M515 132 H660"/>
+    <path d="M555 180 H660"/>
+    <path d="M515 228 H660"/>
+  </g>
+  <circle cx="672" cy="132" r="20" fill="#ffffff"/>
+  <circle cx="672" cy="180" r="20" fill="#ffffff"/>
+  <circle cx="672" cy="228" r="20" fill="#ffffff"/>
+</svg>

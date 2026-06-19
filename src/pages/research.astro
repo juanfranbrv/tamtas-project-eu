@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ResearchPipeline from "../components/ResearchPipeline.astro";
+import { researchStages } from "../data/project";
+---
+
+<BaseLayout
+  title="Research"
+  description="Explore the TaMTAS research pipeline for terminology-aware translation, quality estimation, post-editing and audience adaptation."
+>
+  <header class="inner-hero page-shell">
+    <p class="eyebrow">Research programme</p>
+    <h1>A connected research pipeline.</h1>
+    <p>
+      TaMTAS treats terminology as part of the translation system from the beginning,
+      then evaluates and adapts every output through connected work packages.
+    </p>
+  </header>
+
+  <section class="section pipeline-band">
+    <div class="page-shell">
+      <ResearchPipeline />
+    </div>
+  </section>
+
+  <section class="section page-shell">
+    <div class="section-heading">
+      <p class="eyebrow">Research questions</p>
+      <h2>Each stage addresses a failure point in scientific translation.</h2>
+    </div>
+    <div class="research-detail-list">
+      {
+        researchStages.map((stage) => (
+          <article data-reveal>
+            <span>{stage.workPackage}</span>
+            <h2>{stage.title}</h2>
+            <p>{stage.description}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
