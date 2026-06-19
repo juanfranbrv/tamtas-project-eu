@@ -50,6 +50,7 @@ export const partners = [
     description:
       "Coordinates TaMTAS and leads the creation of domain corpora, terminology extraction and terminology-aware data augmentation.",
     href: "https://www.uoc.edu/",
+    logo: "/partners/uoc.png",
   },
   {
     short: "BSC",
@@ -59,6 +60,7 @@ export const partners = [
     description:
       "Leads the development and fine-tuning of multilingual reasoning-based machine translation for scientific documents.",
     href: "https://www.bsc.es/",
+    logo: "/partners/bsc.svg",
   },
   {
     short: "UoS",
@@ -68,6 +70,7 @@ export const partners = [
     description:
       "Develops terminology-aware quality estimation and automatic post-editing, and coordinates open-science practice.",
     href: "https://www.surrey.ac.uk/centre-translation-studies",
+    logo: "/partners/surrey.svg",
   },
   {
     short: "DCU",
@@ -77,6 +80,7 @@ export const partners = [
     description:
       "Leads human-centred evaluation and ensures that results are communicated clearly to research communities and the public.",
     href: "https://www.dcu.ie/",
+    logo: "/partners/dcu.png",
   },
   {
     short: "UT",
@@ -86,6 +90,7 @@ export const partners = [
     description:
       "Develops audience-aware simplification and explanation strategies for translated scientific content.",
     href: "https://ut.ee/en",
+    logo: "/partners/tartu.svg",
   },
 ] as const;
 

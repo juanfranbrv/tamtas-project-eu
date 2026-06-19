@@ -696,6 +696,46 @@ h3 {
     border-color 260ms ease;
 }
 
+.institution-logo {
+  display: grid;
+  width: 100%;
+  height: 92px;
+  place-items: center start;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+}
+
+.institution-logo img {
+  width: auto;
+  max-width: min(100%, 250px);
+  max-height: 62px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.institution-logo img[src$="uoc.png"] {
+  width: 112px;
+  height: 62px;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.institution-logo img[src$="surrey.svg"] {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(34%) saturate(1485%) hue-rotate(150deg) brightness(88%);
+}
+
+.institution-logo-compact {
+  height: 72px;
+  margin-bottom: 22px;
+  padding-bottom: 16px;
+}
+
+.institution-logo-compact img {
+  max-width: 190px;
+  max-height: 48px;
+}
+
 .partner-entry:nth-child(4),
 .partner-entry:nth-child(5) {
   grid-column: span 3;
@@ -709,7 +749,7 @@ h3 {
 .partner-heading {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 58px;
+  margin-bottom: 34px;
 }
 
 .partner-heading > span {
@@ -1008,6 +1048,113 @@ h3 {
   padding-bottom: clamp(96px, 13vw, 170px);
 }
 
+.consortium-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.consortium-context-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: clamp(36px, 7vw, 100px);
+  align-items: end;
+  min-height: 360px;
+  grid-column: 1 / -1;
+  border-radius: var(--radius-card);
+  background: var(--ink-deep);
+  color: var(--white);
+  overflow: hidden;
+  padding: clamp(32px, 5vw, 64px);
+}
+
+.consortium-context-card h2 {
+  max-width: 10ch;
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2.5rem, 5.5vw, 5.5rem);
+}
+
+.consortium-context-card > p {
+  position: relative;
+  z-index: 1;
+  max-width: 48ch;
+  margin: 0;
+  color: rgb(255 255 255 / 0.64);
+  font-size: 1rem;
+}
+
+.consortium-context-card > img {
+  position: absolute;
+  right: -8%;
+  bottom: -55%;
+  width: min(520px, 46vw);
+  opacity: 0.1;
+  filter: grayscale(1) brightness(5);
+  transform: rotate(-8deg);
+}
+
+.consortium-member-card {
+  display: flex;
+  height: 540px;
+  flex-direction: column;
+  grid-column: span 2;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  background: var(--white);
+  padding: 30px;
+  transition:
+    border-color 240ms ease,
+    transform 240ms var(--ease-out);
+}
+
+.consortium-member-card:nth-child(2),
+.consortium-member-card:nth-child(3) {
+  grid-column: span 3;
+}
+
+.consortium-member-card:hover {
+  border-color: rgb(0 119 200 / 0.45);
+  transform: translateY(-5px);
+}
+
+.consortium-member-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.consortium-member-meta span {
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 760;
+}
+
+.consortium-member-meta small {
+  color: var(--quiet);
+}
+
+.consortium-member-card h2 {
+  max-width: 15ch;
+  margin-bottom: 18px;
+  font-size: clamp(1.55rem, 2.8vw, 2.35rem);
+}
+
+.consortium-member-card > p {
+  margin-bottom: 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.consortium-member-card > strong {
+  margin-top: auto;
+  color: var(--ink);
+  font-size: 0.76rem;
+  line-height: 1.45;
+}
+
 .content-listing {
   display: grid;
   border-top: 1px solid rgb(7 59 76 / 0.18);
@@ -1147,6 +1294,12 @@ h3 {
   .content-listing article > a {
     grid-column: 2;
   }
+
+  .consortium-member-card,
+  .consortium-member-card:nth-child(2),
+  .consortium-member-card:nth-child(3) {
+    grid-column: span 3;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1177,6 +1330,12 @@ h3 {
   .research-detail-list article {
     gap: 14px;
   }
+
+  .consortium-context-card {
+    grid-template-columns: 1fr;
+    min-height: 430px;
+    align-content: end;
+  }
 }
 
 @media (max-width: 560px) {
@@ -1197,6 +1356,13 @@ h3 {
   .content-listing article > p,
   .content-listing article > a {
     grid-column: auto;
+  }
+
+  .consortium-member-card,
+  .consortium-member-card:nth-child(2),
+  .consortium-member-card:nth-child(3) {
+    height: 500px;
+    grid-column: 1 / -1;
   }
 }
 
@@ -1630,6 +1796,33 @@ h3 {
   width: fit-content;
   color: rgb(255 255 255 / 0.78);
   padding-block: 4px;
+}
+
+.footer-partners a {
+  display: grid;
+  width: 100%;
+  min-height: 44px;
+  grid-template-columns: 54px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-partners a img {
+  width: 48px;
+  height: 30px;
+  border-radius: 5px;
+  background: rgb(255 255 255 / 0.92);
+  object-fit: contain;
+  padding: 4px;
+}
+
+.footer-partners a img[src$="uoc.png"] {
+  object-fit: cover;
+  object-position: left center;
+}
+
+.footer-partners a img[src$="surrey.svg"] {
+  background: var(--ink);
 }
 
 .footer-nav a:hover,

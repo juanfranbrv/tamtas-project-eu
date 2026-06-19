@@ -39,6 +39,7 @@ describe("public project content", () => {
       "DCU",
       "UT",
     ]);
+    expect(partners.every((partner) => partner.logo.startsWith("/partners/"))).toBe(true);
   });
 
   it("uses proposal facts without claiming unfinished results", () => {

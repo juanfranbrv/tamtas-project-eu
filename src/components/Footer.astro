@@ -17,7 +17,14 @@ import { partners } from "../data/project";
 
     <div class="footer-partners">
       <p class="footer-label">Consortium</p>
-      {partners.map((partner) => <a href={partner.href}>{partner.short}</a>)}
+      {
+        partners.map((partner) => (
+          <a href={partner.href} aria-label={partner.name}>
+            <img src={partner.logo} alt="" loading="lazy" />
+            <span>{partner.short}</span>
+          </a>
+        ))
+      }
     </div>
   </div>
 

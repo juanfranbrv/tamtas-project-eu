@@ -1,0 +1,41 @@
+---
+import { partners } from "../data/project";
+---
+
+<div class="consortium-grid">
+  <article class="consortium-context-card" data-reveal>
+    <div>
+      <p class="eyebrow">Integrated expertise</p>
+      <h2>Five institutions. One translation pipeline.</h2>
+    </div>
+    <p>
+      Each partner leads a distinct research layer, from terminology resources and
+      multilingual models to quality control, text adaptation and evaluation with users.
+    </p>
+    <img
+      src="/brand/tamtas-logo-mark.svg"
+      alt=""
+      width="640"
+      height="640"
+      aria-hidden="true"
+    />
+  </article>
+
+  {
+    partners.map((partner) => (
+      <a class="consortium-member-card" href={partner.href} data-reveal>
+        <div class="institution-logo">
+          <img src={partner.logo} alt={`${partner.name} logo`} loading="lazy" />
+        </div>
+        <div class="consortium-member-meta">
+          <span>{partner.short}</span>
+          <small>{partner.country}</small>
+        </div>
+        <h2>{partner.name}</h2>
+        <p>{partner.description}</p>
+        <strong>{partner.lead}</strong>
+        <span class="partner-link" aria-hidden="true">Visit institution ↗</span>
+      </a>
+    ))
+  }
+</div>
