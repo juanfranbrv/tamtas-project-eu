@@ -18,6 +18,10 @@ describe("global layout", () => {
   it("defines the approved visual tokens and reduced-motion behavior", async () => {
     const css = await read("../src/styles/global.css");
 
+    expect(css).toContain('--font-primary: "Google Sans Flex"');
+    expect(css).not.toContain("@fontsource-variable");
+    expect(css).not.toContain('"DM Sans Variable"');
+    expect(css).not.toContain('"Inter Variable"');
     expect(css).toContain("--ink: #073b4c");
     expect(css).toContain("--blue: #0077c8");
     expect(css).toContain("--green: #54b948");
@@ -28,6 +32,7 @@ describe("global layout", () => {
   it("includes canonical, Open Graph and structured metadata", async () => {
     const layout = await read("../src/layouts/BaseLayout.astro");
 
+    expect(layout).toContain("fonts.googleapis.com/css2?family=Google+Sans+Flex");
     expect(layout).toContain('rel="canonical"');
     expect(layout).toContain('property="og:title"');
     expect(layout).toContain('type="application/ld+json"');
